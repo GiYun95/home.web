@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
 <!-- header -->
-<link rel="stylesheet" href="../res/css/header.css">
+<link rel="stylesheet" href="res/css/header.css">
 <!-- header end -->
 
 <!-- join.css-->
@@ -51,7 +51,7 @@
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/"><img src="../res/img/logo.png"></a>
+				<a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
 			</div>
 
 			<div class="collapse navbar-collapse">
@@ -209,6 +209,6 @@
 		</div>
 	</div>
 </form>
-
+	
 </body>
 </html>

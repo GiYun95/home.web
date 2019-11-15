@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!-- header.css -->
-<link rel="stylesheet" href="../res/css/header.css">
+<link rel="stylesheet" href="res/css/header.css">
 <!-- end header.css -->
 
 <!-- login.css -->
@@ -66,7 +66,7 @@ a{
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><img src="../res/img/logo.png"></a>
+				<a class="navbar-brand" href="/"><img src="res/img/logo.png"></a>
 			</div>
 
 			<div class="collapse navbar-collapse">
@@ -122,5 +122,6 @@ a{
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
