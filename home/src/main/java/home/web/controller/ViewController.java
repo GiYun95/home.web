@@ -21,5 +21,23 @@ public class ViewController {
 		return "user/joinMember";
 	}
 	
+	@RequestMapping("/findId")
+	public String findId(){
+		return "user/findId";
+	}
 	
+	@RequestMapping("/findPassword")
+	public String findPassword(){
+		return "user/findPassword";
+	}
+	
+	@RequestMapping("/userInfo")
+	public String userInfo(){
+		return "user/userInfo";
+	}
+	
+	@RequestMapping("/booking")
+	public String booking(){
+		return "user/booking";
+	}
 }

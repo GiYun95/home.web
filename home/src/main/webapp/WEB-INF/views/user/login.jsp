@@ -3,7 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+	function findIdview() {
+		var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+		//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
 
+		var popupY= (document.body.offsetHeight / 2) - (300 / 2);
+		//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
+		
+		window.open('findId', '아이디 찾기', 'status=no, height=200, width=400, left='+ popupX + ', top='+ popupY);
+	}
+	function findPasswordview() {
+		var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+		//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
+
+		var popupY= (document.body.offsetHeight / 2) - (300 / 2);
+		//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
+		
+		window.open('findPassword', '아이디 찾기', 'status=no, height=200, width=400, left='+ popupX + ', top='+ popupY);
+	}
+</script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!-- header.css -->
@@ -66,7 +85,7 @@ a{
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/"><img src="res/img/logo.png"></a>
+				<a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
 			</div>
 
 			<div class="collapse navbar-collapse">
@@ -102,14 +121,14 @@ a{
 								<div class="checkbox">
 									
 								</div>
-								<input onclick="location.href='/home" class="btn btn-lg btn-success btn-block" type="button"
+								<input onclick="location.href='userInfo'" class="btn btn-lg btn-success btn-block" type="button"
 									value="로그인"><br> </a>
 							</fieldset>
 						</form>
 						<center style="font-size: 0.9em; color: gray;">
 							<span> 
-								<a href="#">아이디 찾기</a> |
-								<a href="#">비밀번호 찾기</a> |
+								<a href="javascript:void(0);" onclick="findIdview();">아이디 찾기</a> |
+								<a href="javascript:void(0);" onclick="findPasswordview();">비밀번호 찾기</a> |
 								<a href="join">회원가입</a>
 							</span>
 						</center>

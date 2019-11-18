@@ -166,20 +166,23 @@
 								<div class="input-group-addon">
 									<i class="glyphicon glyphicon-list-alt"></i>
 								</div>
-								<div class="row">
-								  <div class="col-md-12 col-xs-12 col-sm-12">
-								    <div class="input-group">
-								   	 <div class="col-md-11" style="padding:0px;">
-								   	 	<input type="text" class="form-control" name="zipcode" placeholder="우편번호" oninput="check()">
-								   	 </div>
-								      <span class="input-group-btn">
-								        <button class="btn btn-secondary" type="button" onclick="zipCheck()" 
-								        style=" border-radius: 7px;margin-right: 12px; padding: 4px; font-size: small;">우편번호 찾기</button>
-								      </span>
-								    </div>
-								  </div>
-								</div>
-								<input type="text" class="form-control" placeholder="주소" name="address" id="address">
+									<div class="row">
+										<div class="col-md-12 col-xs-12 col-sm-12">
+											<div class="input-group">
+												<div class="col-md-11" style="padding: 0px;">
+													<input type="text" class="form-control" name="zipcode"
+														placeholder="우편번호" oninput="check()">
+												</div>
+												<span class="input-group-btn">
+													<button class="btn btn-secondary" type="button"
+														onclick="zipCheck()"
+														style="border-radius: 7px; margin-right: 12px; padding: 4px; font-size: small;">우편번호
+														찾기</button>
+												</span>
+											</div>
+										</div>
+									</div>
+									<input type="text" class="form-control" placeholder="주소" name="address" id="address">
 								<p id="addchk"></p>
 							</div>
 						</div>
