@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
- 
- 	<servlet>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
 		<servlet-name>springContainer</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/spring-context.xml</param-value>
 		</init-param>
+		<!-- 다른 서블릿보다 우선시하여 생성 -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>springContainer</servlet-name>
+		<!-- 서블릿이 request를 받으려면 주소가 필요하다. contextpath(/web) 이후 주소 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
-	
-	
+
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<!-- request는 필터를 거치고 dispatcher에게 간다. -->
 		<init-param>
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
-
 		<init-param>
 			<param-name>forceEncoding</param-name>
 			<param-value>true</param-value>
@@ -37,6 +36,7 @@
 
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
+		<!-- dispatcher는 /만으로 가능, 필터는 /*까지 붙여준다. -->
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 </web-app>

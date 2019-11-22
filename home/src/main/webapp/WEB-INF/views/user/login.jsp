@@ -1,45 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-	function findIdview() {
-		var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-		//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
-
-		var popupY= (document.body.offsetHeight / 2) - (300 / 2);
-		//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
-		
-		window.open('findId', '아이디 찾기', 'status=no, height=200, width=400, left='+ popupX + ', top='+ popupY);
-	}
-	function findPasswordview() {
-		var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-		//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
-
-		var popupY= (document.body.offsetHeight / 2) - (300 / 2);
-		//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
-		
-		window.open('findPassword', '아이디 찾기', 'status=no, height=200, width=400, left='+ popupX + ', top='+ popupY);
-	}
-</script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<head>	
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!-- header.css -->
 <link rel="stylesheet" href="res/css/header.css">
 <!-- end header.css -->
 
-<!-- login.css -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+
 
 <style>
+sweet-size {
+	width: 320px;
+	height: 200px;
+}
+
 .white {
 	color: #000;
 	background-color: #fff;
 }
-a{
+
+a {
 	color: #303030;
 	text-decoration: none;
 }
+
 .btn-facebook {
 	color: #ffffff;
 	-webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -73,11 +65,52 @@ a{
 </style>
 <!-- end login.css -->
 
-
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<script>
 
+var alert = function(msg, type){
+	swal({
+		title:'',
+		text:msg,
+		type:type,
+		timer:1000,
+		customClass:'sweet-size',
+		showConfirmButton:false
+	});
+}
+
+function login() {
+	var userId = $("#userId").val();
+	var userPassword = $("#userPassword").val();
+	console.log(userId,userPassword);
+	
+	if( !(userId && userPassword))
+		alert('아이디와 패스워드를 입력해주세요.', 'warning');
+	else{
+		$("#loginForm").submit();	
+	}
+}
+
+//<![CDATA[
+// 사용할 앱의 JavaScript 키를 설정해 주세요.
+Kakao.init('cc04d60c858f4436ba8162540e9d46e3');
+function loginWithKakao() {
+  // 로그인 창을 띄웁니다.
+  Kakao.Auth.login({
+    success: function(authObj) {
+    	console.log(authObj);
+      alert(JSON.stringify(authObj));
+    },
+    fail: function(err) {
+      alert(JSON.stringify(err));
+    }
+  });
+};
+//]]>
+</script>
 
 </head>
 <body>
@@ -94,46 +127,49 @@ a{
 					<li><a href="">House & Room</a></li>
 					<li><a href="#">Help</a></li>
 				</ul>
-			</div>	
+			</div>
 		</div>
 	</nav>
 	<!-- header end -->
-	<br><br>
+	<br>
+	<br>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title" style="text-align: center; font-size: 1.3em;"><b>LOGIN</b></h3>
+						<h3 class="panel-title"
+							style="text-align: center; font-size: 1.3em;">
+							<b>LOGIN</b>
+						</h3>
 					</div>
 					<div class="panel-body">
-						<form accept-charset="UTF-8" role="form">
+						<form accept-charset="UTF-8" method="POST" action="login.do" id="loginForm" name="loginForm">
 							<fieldset>
 								<div class="form-group">
-									<input class="form-control" placeholder="아이디" name="text"
+									<input class="form-control" placeholder="아이디" name="userId" id="userId"
 										type="text">
 								</div>
 								<div class="form-group">
-									<input class="form-control" placeholder="패스워드" name="password"
-										type="password" value="">
+									<input class="form-control" placeholder="패스워드" id="userPassword"
+										name="userPassword" type="password" value="">
 								</div>
-								<div class="checkbox">
-									
-								</div>
-								<input onclick="location.href='userInfo'" class="btn btn-lg btn-success btn-block" type="button"
+								<div class="checkbox"></div>
+								<input onclick="login();"
+									class="btn btn-lg btn-success btn-block" type="button"
 									value="로그인"><br> </a>
 							</fieldset>
 						</form>
 						<center style="font-size: 0.9em; color: gray;">
-							<span> 
-								<a href="javascript:void(0);" onclick="findIdview();">아이디 찾기</a> |
-								<a href="javascript:void(0);" onclick="findPasswordview();">비밀번호 찾기</a> |
-								<a href="join">회원가입</a>
+							<span> <a href="javascript:void(0);"
+								onclick="findIdview();">아이디 찾기</a> | <a
+								href="javascript:void(0);" onclick="findPasswordview();">비밀번호
+									찾기</a> | <a href="join">회원가입</a>
 							</span>
 						</center>
 						<hr />
-						<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
+						<a id="custom-login-btn" href="javascript:loginWithKakao()" > <img
 							src="http://mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"
 							width="100%" height="50" />
 					</div>

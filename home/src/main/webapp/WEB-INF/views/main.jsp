@@ -1,22 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="namgiyun.home.user.domain.User" %>
+
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 
 <title>숙소 숙박 예약은 쌍용비앤비</title>
 
-<!-- Main -->
+<!-- Main css-->
 <link rel="stylesheet"
    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- Main -->
+<!-- end Main css-->
 
 <!-- header -->
 <link rel="stylesheet" href="res/css/header.css">
 <!-- end header -->
 
 
-<body>
+<body>  
    <!-- header -->
    <nav class="navbar"  style="padding-right:3px;">
       <div class="container">
