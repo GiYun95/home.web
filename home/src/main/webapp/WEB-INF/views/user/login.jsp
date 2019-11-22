@@ -98,11 +98,56 @@ function login() {
 // 사용할 앱의 JavaScript 키를 설정해 주세요.
 Kakao.init('cc04d60c858f4436ba8162540e9d46e3');
 function loginWithKakao() {
+	var userId = '';
+	var userName = '';
+	var email = '';
   // 로그인 창을 띄웁니다.
   Kakao.Auth.login({
     success: function(authObj) {
-    	console.log(authObj);
-      alert(JSON.stringify(authObj));
+   // 로그인 성공시, API를 호출합니다.
+      Kakao.API.request({
+        url: '/v2/user/me',
+        success: function(res) {
+          
+          userId= res.id;
+          email = res.kakao_account.email;
+          userName = res.kakao_account.profile.nickname;
+         
+         
+          console.log(userId, userName, email);
+          $.ajax({
+  			method:"post",
+  			url:"kLogin.do",			
+  			data: {
+  				userId: userId,
+  				userName: userName,
+  				email: email
+  			},
+  			success: function(result){
+  				console.log(result);
+  				if(result){
+  					alert("로그인 성공!");
+  					setTimeout(function() {
+						location.href="/home";
+					}, 1500);
+  				}
+  				else{
+  					alert('로그인할 수 없습니다.!','');
+  					setTimeout(function() {
+						location.href="/login";
+					}, 1500);
+  				}
+  			},
+  			error: function(a, b, errMsg){
+  				$("#msg").text("중복체크 에러: " + errMsg);
+  			}
+  		});
+        },
+        fail: function(error) {
+          alert(JSON.stringify(error));
+        }
+      });
+
     },
     fail: function(err) {
       alert(JSON.stringify(err));

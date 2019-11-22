@@ -57,21 +57,12 @@ var alert = function(msg, type){
 		title:'',
 		text:msg,
 		type:type,
-		timer:1000,
+		timer:1500,
 		customClass:'sweet-size',
 		showConfirmButton:false
 	});
 }
-var alert2 = function(msg, type){
-	swal({
-		title:'',
-		text:msg,
-		type:type,
-		timer:1000,
-		customClass:'sweet-size',
-		showConfirmButton:false
-	});
-}
+
 
 
 
