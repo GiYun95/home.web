@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="namgiyun.home.user.dao.mapper.UserMapper">
+	<insert id="addUser" parameterType="user">
+		insert into users 
+		values (#{userId,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{birth,jdbcType=VARCHAR}, userNo.nextval)
+	</insert>
+	
+	<select id="loginUser" parameterType="user"  resultType="user"> 
+		select userNo, userId, userPassword, userName, phone, email, birth
+		from users
+		where userId = #{userId} and userPassword = #{userPassword,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="idCheck" parameterType="string" resultType="int">
+		select count(userNo)
+		from users
+		where userId = #{userId}
+	</select>
+</mapper>
