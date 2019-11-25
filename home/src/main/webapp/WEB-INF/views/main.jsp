@@ -21,22 +21,38 @@
 
 <body>  
    <!-- header -->
+
    <nav class="navbar"  style="padding-right:3px;">
       <div class="container">
+      <!--  
          <div class="navbar-header">
             <a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
          </div>
-
+		-->
+		<div class="navbar-header">
+				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+			</div>
+			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="login">Login</a></li>
-               <li><a href="#">House & Room</a></li>
-               <li><a href="#">Help</a></li>
+                <c:if test="${null ne user.userName}">
+                 	<li><a href="logout.do">${user.userName}님 환영합니다.</a></li>
+               	</c:if>
+               	<c:if test="${null eq user.userName}">
+               		<li><a href="login">Login</a></li>
+               	</c:if>
+              		<li><a href="04">House & Room</a></li>
+                <c:if test="${null ne user.userName}">
+             	    <li><a href="01">Mypage</a></li>
+               </c:if>
+               <li><a href="customerservice/01">Help</a></li>     
             </ul>
          </div>
       </div>
    </nav>
    <!-- header end -->
+   
+   
    
    
    <!-- body: 배너+숙소검색 -->

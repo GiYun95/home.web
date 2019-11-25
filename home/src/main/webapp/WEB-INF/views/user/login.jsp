@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>	
@@ -94,6 +94,30 @@ function login() {
 	}
 }
 
+function findIdview() {
+	var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+	//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
+
+	var popupY = (document.body.offsetHeight / 2) - (300 / 2);
+	//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
+
+	window.open('findId', '아이디 찾기',
+			'status=no, height=200, width=400, left=' + popupX + ', top='
+					+ popupY);
+}
+function findPasswordview() {
+	var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+	//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
+
+	var popupY = (document.body.offsetHeight / 2) - (300 / 2);
+	//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
+
+	window.open('findPassword', '아이디 찾기',
+			'status=no, height=200, width=400, left=' + popupX + ', top='
+					+ popupY);
+}
+
+
 //<![CDATA[
 // 사용할 앱의 JavaScript 키를 설정해 주세요.
 Kakao.init('cc04d60c858f4436ba8162540e9d46e3');
@@ -160,22 +184,36 @@ function loginWithKakao() {
 </head>
 <body>
 	<!-- header -->
-	<nav class="navbar">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
-			</div>
 
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="login">Login</a></li>
-					<li><a href="">House & Room</a></li>
-					<li><a href="#">Help</a></li>
-				</ul>
+   <nav class="navbar"  style="padding-right:3px;">
+      <div class="container">
+      <!--  
+         <div class="navbar-header">
+            <a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
+         </div>
+		-->
+		<div class="navbar-header">
+				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
-		</div>
-	</nav>
-	<!-- header end -->
+			
+         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <c:if test="${null ne user.userName}">
+                 	<li><a href="logout.do">${user.userName}님 환영합니다.</a></li>
+               	</c:if>
+               	<c:if test="${null eq user.userName}">
+               		<li><a href="login">Login</a></li>
+               	</c:if>
+              		<li><a href="04">House & Room</a></li>
+                <c:if test="${null ne user.userName}">
+             	    <li><a href="01">Mypage</a></li>
+               </c:if>
+               <li><a href="customerservice/01">Help</a></li>     
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <!-- header end -->
 	<br>
 	<br>
 
