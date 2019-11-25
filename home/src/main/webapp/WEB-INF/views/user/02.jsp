@@ -106,7 +106,7 @@ function join() {
 					if(result){
 						alert('회원가입 성공!','');
 						setTimeout(function() {
-							location.href="/home";
+							location.href="/namgiyun.home";
 						}, 1300);
 					}else 
 						alert('아이디와 비밀번호를 확인해주세요!','warning');
@@ -179,7 +179,6 @@ function birthchk() {
 </head>
 <body>
 	<!-- header -->
-
    <nav class="navbar"  style="padding-right:3px;">
       <div class="container">
       <!--  
@@ -188,22 +187,22 @@ function birthchk() {
          </div>
 		-->
 		<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
 			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="login">Login</a></li>
+               		<li><a href="/namgiyun.home/login">Login</a></li>
                	</c:if>
-              		<li><a href="04">House & Room</a></li>
+              		<li><a href="/namgiyun.home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="01">Mypage</a></li>
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
                </c:if>
-               <li><a href="customerservice/01">Help</a></li>     
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>

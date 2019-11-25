@@ -162,7 +162,7 @@ b{
 </style>
 
 <body>  
-   <!-- header -->
+  <!-- header -->
    <nav class="navbar"  style="padding-right:3px;">
       <div class="container">
       <!--  
@@ -171,22 +171,22 @@ b{
          </div>
 		-->
 		<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
 			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="/home/logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="/home/login">Login</a></li>
+               		<li><a href="/namgiyun.home/login">Login</a></li>
                	</c:if>
-              		<li><a href="/home/04">House & Room</a></li>
+              		<li><a href="/namgiyun.home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="/home/01">Mypage</a></li>
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
                </c:if>
-               <li><a href="/home/customerservice/04">Help</a></li>     
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>
@@ -242,8 +242,8 @@ b{
 	    </div><hr>
 	    <!-- location end -->
 	    <!-- review -->
-	    <iframe src="review/01" width="600" height="350" frameborder="0"></iframe>
-	    <iframe src="review/02" width="1200" height="770" frameborder="0"></iframe>
+	    <iframe src="/namgiyun.home/review/01" width="600" height="350" frameborder="0"></iframe>
+	    <iframe src="/namgiyun.home/review/02" width="1200" height="770" frameborder="0"></iframe>
 	    <!-- review end -->
 	  </div>
 	  <!-- col-md-6 left end -->

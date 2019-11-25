@@ -10,7 +10,7 @@
 <!-- Main -->
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <!-- header -->
-<link rel="stylesheet" href="/home/res/css/header.css">
+<link rel="stylesheet" href="/namgiyun.home/res/css/header.css">
 <!-- end header -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -46,22 +46,22 @@
          </div>
 		-->
 		<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
 			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="/home/logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="/home/login">Login</a></li>
+               		<li><a href="/namgiyun.home/login">Login</a></li>
                	</c:if>
-              		<li><a href="/home/04">House & Room</a></li>
+              		<li><a href="/namgiyun.home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="/home/01">Mypage</a></li>
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
                </c:if>
-               <li><a href="/home/customerservice/04">Help</a></li>     
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>
@@ -76,19 +76,19 @@
 			<!-- tab menu -->
 			<div class="tabbable">
 				<ul class="nav nav-tabs" id="mytab" style="margin: 40px 0% 2%;">
-					<li><a href="/home/01" style="font-size: medium;"><b>내 숙소 등록</b></a></li>
-					<li><a href="/home/02" data-toggle="tab"
+					<li><a href="/namgiyun.home/01" style="font-size: medium;"><b>내 숙소 등록</b></a></li>
+					<li><a href="/namgiyun.home/02" data-toggle="tab"
 						aria-expanded="true" style="color: #303030; font-size: medium;"><b>내
 								숙소 보기</b></a></li>
-					<li><a href="/home/userReservation" data-toggle="tab"
+					<li><a href="/namgiyun.home/userReservation" data-toggle="tab"
 						aria-expanded="true" style="color: #303030; font-size: medium;"><b>예약
 								확인</b></a></li>
-					<li><a href="/home/hostReservation" data-toggle="tab"
+					<li><a href="/namgiyun.home/hostReservation" data-toggle="tab"
 						aria-expanded="true" style="color: #303030; font-size: medium;"><b>호스트
 								전용 예약내역</b></a></li>
-					<li class="active"><a href="/home/customerservice/01" data-toggle="tab"
+					<li class="active"><a href="/namgiyun.home/customerservice/01" data-toggle="tab"
 						aria-expanded="true" style="color: #303030; font-size: medium;"><b>문의내역</b></a></li>
-					<li><a href="/home/userInfo" data-toggle="tab" aria-expanded="true"
+					<li><a href="/namgiyun.home/userInfo" data-toggle="tab" aria-expanded="true"
 						style="color: #303030; font-size: medium;"><b>회원정보수정</b></a></li>
 				</ul>
 			</div>
@@ -124,53 +124,53 @@
 							<th class="text-center">조회</th>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 						<tr>
-							<td width="6%" onclick="location.href='/home/customerservice/03'">임시1</td>
-							<td width="60%" onclick="location.href='/home/customerservice/03'">임시2</td>
-							<td onclick="location.href='/home/customerservice/03'">임시3</td>
-							<td onclick="location.href='/home/customerservice/03'">임시4</td>
-							<td width="6%" onclick="/home/customerservice/03'">임시5</td>
+							<td width="6%" onclick="location.href='/namgiyun.home/customerservice/03'">임시1</td>
+							<td width="60%" onclick="location.href='/namgiyun.home/customerservice/03'">임시2</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시3</td>
+							<td onclick="location.href='/namgiyun.home/customerservice/03'">임시4</td>
+							<td width="6%" onclick="/namgiyun.home/customerservice/03'">임시5</td>
 						</tr>
 					</tbody>
 				</table>
@@ -178,7 +178,7 @@
 					href="#"> 1 </a><a href="#"> > </a></span>
 				<div style="float: right;">
 					<button class="btn btn-default" type="button"
-						onclick="location.href='/home/customerservice/02'">글쓰기</button>
+						onclick="location.href='/namgiyun.home/customerservice/02'">글쓰기</button>
 				</div>
 			</div>	
 </body>

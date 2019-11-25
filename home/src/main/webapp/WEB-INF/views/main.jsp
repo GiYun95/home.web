@@ -32,22 +32,22 @@ function gohome(){
          </div>
 		-->
 		<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
 			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="/home/logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="/home/login">Login</a></li>
+               		<li><a href="/namgiyun.home/login">Login</a></li>
                	</c:if>
-              		<li><a href="/home/04">House & Room</a></li>
+              		<li><a href="/namgiyun.home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="/home/01">Mypage</a></li>
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
                </c:if>
-               <li><a href="customerservice/04">Help</a></li>     
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>

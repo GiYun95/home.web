@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<link rel="stylesheet" href="res/css/header.css">
+<link rel="stylesheet" href="/namgiyun.home/res/css/header.css">
 <style>
 html, body, .wrapper {
 }
@@ -377,22 +377,22 @@ hr {
          </div>
 		-->
 		<div class="navbar-header">
-				<a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-home"></i></a>
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
 			</div>
 			
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="/home/logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="/home/login">Login</a></li>
+               		<li><a href="/namgiyun.home/login">Login</a></li>
                	</c:if>
               		<li><a href="/home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="/home/01">Mypage</a></li>
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
                </c:if>
-               <li><a href="/home/customerservice/04">Help</a></li>     
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>
@@ -502,7 +502,7 @@ hr {
 							</div>
 							<div class="form-group">
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<button type="button" class="btn btn-primary btn-submit-fix" onclick="location.href='/home/userReservation'"
+									<button type="button" class="btn btn-primary btn-submit-fix" onclick="location.href='/namgiyun.home/userReservation'"
 									style="padding: 20px;padding: 20px;font-size: larger; 
 									color: #303030; background-color: #3c763d6b;  border: none;">예약 요청하기</button>
 								</div>

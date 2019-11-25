@@ -28,37 +28,35 @@
 	<!-- end header -->
 <body>
 	<!-- header -->
-
-	<nav class="navbar" style="padding-right:3px;">
-	<div class="container">
-		<!--  
+   <nav class="navbar"  style="padding-right:3px;">
+      <div class="container">
+      <!--  
          <div class="navbar-header">
             <a class="navbar-brand" href="/home"><img src="res/img/logo.png"></a>
          </div>
 		-->
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/home"><i
-				class="glyphicon glyphicon-home"></i></a>
-		</div>
-
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<c:if test="${null ne user.userName}">
-					<li><a href="logout.do">${user.userName}님 환영합니다.</a></li>
-				</c:if>
-				<c:if test="${null eq user.userName}">
-					<li><a href="login">Login</a></li>
-				</c:if>
-				<li><a href="04">House & Room</a></li>
-				<c:if test="${null ne user.userName}">
-					<li><a href="01">Mypage</a></li>
-				</c:if>
-				<li><a href="customerservice/01">Help</a></li>
-			</ul>
-		</div>
-	</div>
-	</nav>
-	<!-- header end -->
+				<a class="navbar-brand" href="/namgiyun.home"><i class="glyphicon glyphicon-home"></i></a>
+			</div>
+			
+         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <c:if test="${null ne user.userName}">
+                 	<li><a href="/namgiyun.home/logout.do">${user.userName}님 환영합니다.</a></li>
+               	</c:if>
+               	<c:if test="${null eq user.userName}">
+               		<li><a href="/namgiyun.home/login">Login</a></li>
+               	</c:if>
+              		<li><a href="/namgiyun.home/04">House & Room</a></li>
+                <c:if test="${null ne user.userName}">
+             	    <li><a href="/namgiyun.home/01">Mypage</a></li>
+               </c:if>
+               <li><a href="/namgiyun.home/customerservice/04">Help</a></li>     
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <!-- header end -->
 	
 	<!-- menu -->
 	<section>
@@ -153,7 +151,7 @@
 								</div>
 							</div>
 						</div>
-
+						<!-- 
 						<div class="form-group">
 							<label class="control-label col-sm-2">주소</label>
 							<div class="col-md-8 col-sm-9">
@@ -172,14 +170,15 @@
 									id="address" readonly="readonly">
 								<p id="addchk">
 							</div>
+							 -->
 						</div>
 					</form>
 					<center>
-						<button class="btn btn-secondary" type="button"
+						<button class="btn btn-secondary" type="button" onclick="location.href='/namgiyun.home'"
 							style="border-radius: 7px; margin-left: 12px; padding: 4px; font-size: small; width: 60px;">
 							<b>취 소</b></b>
 						</button>
-						<button class="btn btn-secondary" type="button"
+						<button class="btn btn-secondary" type="button" onclick="location.href='/namgiyun.home'"
 							style="border-radius: 7px; margin-left: 18px; padding: 4px; font-size: small; width: 60px;">
 							<b>수 정</b>
 						</button>
