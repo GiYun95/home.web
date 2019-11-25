@@ -21,7 +21,6 @@
 
 <body>  
    <!-- header -->
-
    <nav class="navbar"  style="padding-right:3px;">
       <div class="container">
       <!--  
@@ -36,16 +35,16 @@
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${null ne user.userName}">
-                 	<li><a href="logout.do">${user.userName}님 환영합니다.</a></li>
+                 	<li><a href="/home/logout.do">${user.userName}님 환영합니다.</a></li>
                	</c:if>
                	<c:if test="${null eq user.userName}">
-               		<li><a href="login">Login</a></li>
+               		<li><a href="/home/login">Login</a></li>
                	</c:if>
-              		<li><a href="04">House & Room</a></li>
+              		<li><a href="/home/04">House & Room</a></li>
                 <c:if test="${null ne user.userName}">
-             	    <li><a href="01">Mypage</a></li>
+             	    <li><a href="/home/01">Mypage</a></li>
                </c:if>
-               <li><a href="customerservice/01">Help</a></li>     
+               <li><a href="customerservice/04">Help</a></li>     
             </ul>
          </div>
       </div>
