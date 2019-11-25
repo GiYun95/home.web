@@ -17,8 +17,11 @@
 <!-- header -->
 <link rel="stylesheet" href="res/css/header.css">
 <!-- end header -->
-
-
+<script type="text/javascript">
+function gohome(){
+   location.href='04';
+}
+</script>
 <body>  
    <!-- header -->
    <nav class="navbar"  style="padding-right:3px;">
@@ -74,8 +77,8 @@
                class="form-control" id="number">
          </div>
          &nbsp;&nbsp;&nbsp;
-         <button type="submit" class="btn btn-outline-dark">
-            <b>CHECK</b>
+         <button type="button" class="btn btn-outline-dark" onclick="javascript:gohome()">
+            <b>검색</b>
          </button>
       </form>
    </section>
@@ -86,10 +89,10 @@
          <h3 align="center">ㅡ 많은 고객들이 만족한 숙소 ㅡ</h3>
          <hr>
          <h3 style="margin-left: 17px;">숙소  리스트</h3>
-         <img class="col-md-3 previewImg" width="200" height="350"> <img
-            class="col-md-3 previewImg" width="200" height="350"> <img
-            class="col-md-3 previewImg" width="200" height="350"> <img
-            class="col-md-3 previewImg" width="200" height="350">
+         <a href="04"><img class="col-md-3 previewImg" width="200" height="350"></a>
+         <a href="04"><img class="col-md-3 previewImg" width="200" height="350"></a>
+         <a href="04"><img class="col-md-3 previewImg" width="200" height="350"></a>
+         <a href="04"><img class="col-md-3 previewImg" width="200" height="350"></a>
       </div>
       <br>
    </section>

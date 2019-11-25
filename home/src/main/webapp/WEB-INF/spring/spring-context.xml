@@ -17,7 +17,7 @@
 	<!-- ch01: mvc -->
 	<context:component-scan base-package="namgiyun.home" />
 	<mvc:annotation-driven />
-	<mvc:resources mapping="/res/**" location="/res/" />
+	<mvc:resources mapping="/res/**" location="/WEB-INF/res/" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

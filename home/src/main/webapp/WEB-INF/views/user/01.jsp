@@ -90,7 +90,26 @@ function login() {
 	if( !(userId && userPassword))
 		alert('아이디와 패스워드를 입력해주세요.', 'warning');
 	else{
-		$("#loginForm").submit();	
+		$.ajax({
+			method:"post",
+			url:"login.do",			
+			data: {
+				userId: userId,
+				userPassword: userPassword
+			},
+			success: function(result){
+				if(result){
+					alert('로그인 성공!','');
+					setTimeout(function() {
+						location.href="/home";
+					}, 1500);
+				}else 
+					alert('아이디와 비밀번호를 확인해주세요!','warning');
+			},
+			error: function(a, b, errMsg){
+				$("#msg").text("로그인 실패: " + errMsg);
+			}
+		});
 	}
 }
 
@@ -156,6 +175,7 @@ function loginWithKakao() {
 					}, 1500);
   				}
   				else{
+  					
   					alert('로그인할 수 없습니다.!','');
   					setTimeout(function() {
 						location.href="/login";

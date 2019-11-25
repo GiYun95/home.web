@@ -70,12 +70,14 @@
 					style="color: #303030; font-size: medium;"><b>회원정보수정</b></a></li>
 			</ul>
 		</div>
-		<!-- tab menu end -->
+	</div>
+	</section>
+	<!-- tab menu end -->
 
 
 
 
-		<div class="container mb-4" style="width: 100%">
+		<div class="container">
 			<div class="row">
 				<h3 style="margin-left: 18px;">
 					<b>예약내역</b>
@@ -100,7 +102,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td style="width: 210px;"><a href="#"><div
+									<td style="width: 210px;"><a href="05"><div
 												style="width: 180px; height: 120px; border: 1px solid;"></div>
 											<img src="" width="180px;"></a></td>
 									<td><h3>쌍용게스트하우스</h3>★★★★☆<br>
@@ -123,7 +125,7 @@
 										<button class="glyphicon glyphicon-ok" style="height: 40px;"></button></td>
 								</tr>
 								<tr>
-									<td style="width: 210px;"><a href="#"><div
+									<td style="width: 210px;"><a href="05"><div
 												style="width: 180px; height: 120px; border: 1px solid;"></div>
 											<img src="" width="180px;"></td>
 									<td><h3>그랜드하얏트</h3>★★☆☆☆<br>
@@ -153,8 +155,8 @@
 		</div>
 
 		<div></div>
-		<div style="width: 600px;">
-			<iframe src="calender" height="550px;" width="100%;"></iframe>
+		<div class="col-md-12">
+			<iframe src="calender" height="810px;" width="100%;" frameborder="0"></iframe>
 		</div>
 </body>
 </html>

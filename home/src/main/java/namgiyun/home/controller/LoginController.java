@@ -29,21 +29,23 @@ public class LoginController {
 	}
 
 	@RequestMapping("login.do")
-	public void login(User user, HttpSession session, HttpServletResponse response) throws IOException {
+	@ResponseBody
+	public boolean login(User user, HttpSession session, HttpServletResponse response) throws IOException {
 		System.out.println("============login.do=================");
 
 		User loginUser = userService.loginUser(user);
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
+		//response.setContentType("text/html; charset=UTF-8");
+		//PrintWriter out = response.getWriter();
 
 		if (loginUser == null || loginUser.equals("")) {
-			out.println("<script>alert('아이디와 비밀번호를 확인해주세요!',''); location.href='login';</script>");
-			out.flush();
+			return false;
+			//out.println("<script>alert('아이디와 비밀번호를 확인해주세요!',''); location.href='login';</script>");
+			//out.flush();
 		}else{
 			session.setAttribute("user", loginUser);
-			out.println("<script>location.href='/home';</script>");
-			out.flush();
-		
+			return true;
+			//out.println("<script>location.href='/home';</script>");
+			//out.flush();
 		}	
 	}
 	

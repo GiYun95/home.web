@@ -97,6 +97,7 @@
 			<h2 align="center">
 				<u>문의내역</u>
 			</h2>
+		</div>
 			<form class="form-inline"
 				style="float: left; margin: 0; background-color: #fff; border: 0px solid; padding-left: 20%">
 

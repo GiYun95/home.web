@@ -109,7 +109,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td style="width: 210px;"><a href="#"><div
+									<td style="width: 210px;"><a href="05"><div
 												style="width: 180px; height: 120px; border: 1px solid;"></div>
 											<img src="" width="180px;"></a></td>
 									<td><h3>쌍용게스트하우스</h3>★★★★☆<br>
@@ -132,7 +132,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td style="width: 210px;"><a href="#"><div
+									<td style="width: 210px;"><a href="05"><div
 												style="width: 180px; height: 120px; border: 1px solid;"></div>
 											<img src="" width="180px;"></td>
 									<td><h3>그랜드하얏트</h3>★★☆☆☆<br>

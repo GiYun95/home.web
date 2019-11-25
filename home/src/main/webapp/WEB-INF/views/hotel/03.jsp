@@ -224,7 +224,31 @@ textarea{
       </div>
    </nav>
    <!-- header end -->
-   
+   	<!-- menu -->
+	<section>
+	<div class="container">
+
+		<!-- tab menu -->
+		<div class="tabbable">
+			<ul class="nav nav-tabs" id="mytab" style="margin: 40px 0% 2%;">
+				<li><a href="01" style="font-size: medium;"><b>내 숙소 등록</b></a></li>
+				<li class="active"><a href="02" data-toggle="tab" aria-expanded="true"
+					style="color: #303030; font-size: medium;"><b>내 숙소 보기</b></a></li>
+				<li><a href="userReservation" data-toggle="tab"
+					aria-expanded="true" style="color: #303030; font-size: medium;"><b>예약
+							확인</b></a></li>
+				<li><a href="hostReservation" data-toggle="tab"
+					aria-expanded="true" style="color: #303030; font-size: medium;"><b>호스트
+							전용 예약내역</b></a></li>
+				<li><a href="customerservice/01" data-toggle="tab"
+					aria-expanded="true" style="color: #303030; font-size: medium;"><b>문의내역</b></a></li>
+				<li><a href="userInfo" data-toggle="tab" aria-expanded="true"
+					style="color: #303030; font-size: medium;"><b>회원정보수정</b></a></li>
+			</ul>
+		</div>
+	</div>
+	</section>
+	<!-- tab menu end -->
    
    
 	<hr>
@@ -241,9 +265,9 @@ textarea{
 			  </div>
 			  <div class="col-md-6 form">
 			    <h4>2. 침실, 침대, 욕실 수를 알려주세요.</h4>
-			    <input type="number" class="form-control" id="bedroom" placeholder="침실 2개">
-			    <input type="number" class="form-control" id="bed" placeholder="침대 3개">
-			    <input type="number" class="form-control" id="bathroom" placeholder="욕실 2개">
+			    <input type="number" class="form-control" id="bedroom" placeholder="침실 2개" min="1">
+			    <input type="number" class="form-control" id="bed" placeholder="침대 3개" min="0">
+			    <input type="number" class="form-control" id="bathroom" placeholder="욕실 2개" min="1">
 			  </div>
 			  <div class="col-md-6 comment">
 		        <h4>침실 1개당 침대 수를 입력하지 말아주세요.<br><br>

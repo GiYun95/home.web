@@ -96,13 +96,13 @@
 			<h3>숙소  리스트</h3>
 			  <div class="col-md-9 homeList">
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="info col-md-4">
 			      <p>방 1개 침대 1개</p>
@@ -129,7 +129,7 @@
 				        <input type="text" class="form-control" id="location" placeholder="목적지">
 				        <input type="date" class="form-control" id="checkIn" placeholder="체크인 날짜">
 				        <input type="date" class="form-control" id="checkOut" placeholder="체크아웃 날짜">
-				        <input type="number" class="form-control" id="guests" placeholder="인원 수">
+				        <input type="number" class="form-control" id="guests" placeholder="인원 수" min="1">
 				        <button type="submit" class="btn btn-lg btn-success btn-block">검색</button>
 				      </div>	   
 				    </form>
@@ -138,13 +138,13 @@
 			  </div>
 			  <div class="col-md-9 homeList">
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="info col-md-4">
 			      <p>방 1개 침대 1개</p>
@@ -164,13 +164,13 @@
 			  </div>
 			  <div class="col-md-9 homeList">
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="homeImg">
-			      <a href="06.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
+			      <a href="05.html"><img class="col-md-4 previewImg" width="200" height="350"></a>
 			    </div>
 			    <div class="info col-md-4">
 			      <p>방 1개 침대 1개</p>
